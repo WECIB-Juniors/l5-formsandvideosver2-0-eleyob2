@@ -1,3 +1,6 @@
+<!-- Student Registration Form Assignment -->
+<!-- Author: [Your Name] -->
+<!-- Date: December 4, 2025 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,50 +10,64 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section id="main">
-        <h1>Student Registration Form</h1>
-        <form id="Form" action="#" method="get">
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" required><br><br>
+    <main>
+        <section id="main">
+            <header>
+                <center><h1>Student Registration Form</h1></center>
+            </header>
+            <p>Please fill out this form to register for our student program. All fields marked with * are required.</p>
+            <!-- Using GET method to display form data in URL for testing purposes -->
+            <form id="Form" action="./index.html" method="get">
+            <label for="firstName">First Name: *</label>
+            <input type="text" id="firstName" name="firstName" minlength="2" required><br><br>
 
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required><br><br>
+            <label for="lastName">Last Name: *</label>
+            <input type="text" id="lastName" name="lastName" minlength="2" required><br><br>
 
-            <label for="email">Email:</label>
+            <label for="email">Email: *</label>
             <input type="email" id="email" name="email" required><br><br>
 
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone"><br><br>
+            <label for="phone" class="line1S">Phone Number: *</label> 
+            <p class="line2">format: 123-456-7890</p>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
 
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="address"><br><br>
+            <label for="address">Address: *</label>
+            <input type="text" id="address" name="address"required><br><br>
 
-            <label for="education">Highest Level of Education:</label>
-            <select id="education" name="education">
+            <label for="education">Highest Level of Education: *</label>
+            <select id="education" name="education" required>
                 <option value="highschool">High School</option>
                 <option value="bachelor">Bachelor's Degree</option>
                 <option value="master">Master's Degree</option>
                 <option value="phd">PhD</option>
             </select><br><br>
-        <button type="submit">Register</button>
-        </form>
-        <br>
-        <h4>Watch the video for better understanding:</h4>
-        <iframe width="400" height="315" 
-            src="https://www.youtube.com/embed/bM_E5bydJs0?si=dIpF9jFb-rsm5WIf" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-            <video controls>
-                <source src="movie.mp4" type="video/mp4">
-                <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
-                <track src="subtitles_es.vtt" kind="subtitles" srclang="es" label="Español">
-            </video>
 
-        </iframe>
-    </section>
-    
+            <label for="courses">Courses Interested In: *</label><br>
+            <input type="checkbox" id="course1" name="courses" value="math">
+            <label for="course1">Mathematics</label><br>
+            <input type="checkbox" id="course2" name="courses" value="science">
+            <label for="course2">Science</label><br>
+            <input type="checkbox" id="course3" name="courses" value="history">
+            <label for="course3">History</label><br>
+            <input type="checkbox" id="course4" name="courses" value="art">
+            <label for="course4">Art</label><br><br> 
+
+            <label for="comments">Additional Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+            <button type="submit">Register</button>
+            </form>
+            <br>
+
+            <h2>Relaxing Video/Music</h2>
+            <p>Listen to this video while filling out the form:</p>
+            <video width="500" height="400" controls>
+                <source src="videos/waterfall.mp4" type="video/mp4" alt="A calming waterfall scene">
+                <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        <br>
+    </main>
 </body>
 </html>

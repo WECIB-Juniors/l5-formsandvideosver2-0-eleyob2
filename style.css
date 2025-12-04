@@ -8,7 +8,7 @@ body {
 #main{
     padding: 20px;
     border-radius: 10px;
-    width: 400px;
+    width: 500px;
     margin: auto;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.8);
@@ -21,4 +21,14 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+
+.line1, .line2 {
+    display: inline-block; /* or inline */
+    margin-right: 10px;    /* space between them */
+}
+
+.line2 {
+    color: rgba(0, 0, 0, 0.500);
 }
